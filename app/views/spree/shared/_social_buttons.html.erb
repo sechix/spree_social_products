@@ -1,0 +1,37 @@
+ <!-- end add to bag button -->
+ <div class="col-md-7 col-sm-7 product-details-social no-padding margin-top">
+   <!-- social media sharing -->
+   <span class="black-text text-uppercase text-small vertical-align-middle margin-right-five"><%=Spree.t(:compartir)%></span>
+
+    <% if Spree::Social::Config.preferred_twitter_button %>
+
+        <%= render 'spree/social/twitter' %>
+
+    <% end %>
+    <% if Spree::Social::Config.preferred_pinterest_button %>
+        <%= render 'spree/social/pinterest' %>
+    <% end %>
+    <% if Spree::Social::Config.preferred_reddit_button %>
+        <%= render 'spree/social/reddit' %>
+    <% end %>
+    <% if Spree::Social::Config.preferred_tumblr_button %>
+        <%= render 'spree/social/tumblr' %>
+    <% end %>
+    <% if Spree::Social::Config.preferred_delicious_button %>
+        <%= render 'spree/social/delicious' %>
+    <% end %>
+    <% if Spree::Social::Config.preferred_google_plus_button %>
+
+        <%= render 'spree/social/google_plus' %>
+
+    <% end %>
+    <% if Spree::Social::Config.preferred_facebook_button %>
+
+        <%= render 'spree/social/facebook' %>
+
+    <% end %>
+
+</div>
+
+<!-- end add to bag button -->
+</div>
