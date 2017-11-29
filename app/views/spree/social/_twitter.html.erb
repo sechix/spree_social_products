@@ -5,13 +5,12 @@
   <% end %>
   <meta property="twitter:title" content="<%= @product.name %>" />
 
-    <% if @variant.images.length == 0 %>
-        <meta property="twitter:image" content="localhost:3000/<%=@variant.product.display_image.attachment(:product)%>" />
-    <% else %>
-        <meta property="twitter:image" content="localhost:3000/<%= @variant.images.first.attachment.url(:product) %>" />
+    <% if @product.variant.images.length == 0 %>
 
-    <% end %>
+        <% @product.images.each do |img| %>
+            <meta property="twitter:image" content="<%= absolute_image_url(img.attachment.url) %>" />
 
+        <% end %>
   <% unless @product.price.nil? %>
     <meta property="twitter:label1" content="<%= Spree.t(:price) %>" />
     <meta property="twitter:data1" content="<%= @product.price_in(current_currency).money %>" />
