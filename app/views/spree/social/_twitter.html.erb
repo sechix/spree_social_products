@@ -4,9 +4,6 @@
     <meta property="twitter:site" content="<%= Spree::Social::Config.preferred_twitter_id %>" />
   <% end %>
   <meta property="twitter:title" content="<%= @product.name %>" />
-
-    <% if @product.variant.images.length == 0 %>
-
         <% @product.images.each do |img| %>
             <meta property="twitter:image" content="<%= absolute_image_url(img.attachment.url) %>" />
 
